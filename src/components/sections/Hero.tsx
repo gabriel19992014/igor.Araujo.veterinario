@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MapPin, PhoneCall, Sparkles } from "lucide-react";
+import { PhoneCall, Sparkles } from "lucide-react";
 
 import { TrackedExternalLink } from "@/components/ui/TrackedExternalLink";
 import { clinicInfo, siteAssets, whatsappUrl } from "@/lib/site";
@@ -12,15 +12,15 @@ export function Hero() {
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-blue)]/25 bg-white px-4 py-2 text-sm font-semibold text-[var(--brand-blue)]">
             <Sparkles className="h-4 w-4" />
-            Clínica veterinária em {clinicInfo.city}
+            Atendimento veterinário domiciliar em {clinicInfo.city}
           </div>
 
           <div className="space-y-4">
             <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-[var(--ink-900)] sm:text-5xl lg:text-6xl">
-              Cuidando do seu pet com carinho e atenção todos os dias
+              Veterinário na sua casa com cuidado, praticidade e confiança
             </h1>
             <p className="max-w-xl text-lg leading-8 text-[var(--ink-600)]">
-              Atendimento veterinário completo para cães e gatos com consultas, vacinas, check-up, exames e agendamento rápido pelo WhatsApp.
+              Consultas, vacinas, check-up e acompanhamento para cães e gatos no conforto do seu lar, com agendamento rápido pelo WhatsApp.
             </p>
           </div>
 
@@ -29,14 +29,14 @@ export function Hero() {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Agendar consulta pelo WhatsApp"
-              title="Agendar consulta pelo WhatsApp"
+              aria-label="Agendar atendimento domiciliar pelo WhatsApp"
+              title="Agendar atendimento domiciliar pelo WhatsApp"
               eventName="whatsapp_click"
               eventParams={{ placement: "hero_primary_cta" }}
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[var(--brand-green)] px-8 text-base font-semibold text-white shadow-[0_8px_30px_rgba(22,163,74,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[color-mix(in_oklab,var(--brand-green),black_8%)]"
             >
               <PhoneCall className="h-4 w-4" />
-              Agende agora pelo WhatsApp
+              Agende atendimento domiciliar
             </TrackedExternalLink>
             <a
               href="#servicos"
@@ -48,15 +48,12 @@ export function Hero() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-black/5 bg-white p-4 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--brand-blue)]">Localização</p>
-              <p className="mt-2 flex items-center gap-2 text-sm text-[var(--ink-700)]">
-                <MapPin className="h-4 w-4 text-[var(--brand-green)]" />
-                {clinicInfo.address}
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--brand-blue)]">Atendimento em domicílio</p>
+              <p className="mt-2 text-sm text-[var(--ink-700)]">Consultas e retornos no conforto da sua casa, com mais tranquilidade para você e seu pet.</p>
             </div>
             <div className="rounded-2xl border border-black/5 bg-white p-4 shadow-sm">
-              <p className="text-2xl font-bold text-[var(--ink-900)]">+3.000</p>
-              <p className="text-sm text-[var(--ink-600)]">Atendimentos com cuidado humanizado</p>
+              <p className="text-2xl font-bold text-[var(--ink-900)]">+50</p>
+              <p className="text-sm text-[var(--ink-600)]">Atendimentos domiciliares com cuidado humanizado</p>
             </div>
           </div>
         </div>

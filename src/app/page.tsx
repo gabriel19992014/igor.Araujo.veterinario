@@ -1,8 +1,8 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { About } from "@/components/sections/About";
-import { Contact } from "@/components/sections/Contact";
 import { CTA } from "@/components/sections/CTA";
+import { Faq } from "@/components/sections/Faq";
 import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
@@ -19,8 +19,8 @@ export default function Home() {
         <About />
         <Testimonials />
         <Gallery />
+        <Faq />
         <CTA />
-        <Contact />
       </main>
       <Footer />
       <WhatsappFloat />

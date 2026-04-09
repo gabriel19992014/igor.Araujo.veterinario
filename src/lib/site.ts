@@ -1,9 +1,8 @@
 export const clinicInfo = {
-  name: "Clínica Veterinária Vet Cuidado",
+  name: "Vet Cuidado Domiciliar",
   city: "Manaus",
   phoneRaw: "5592993198359",
   phoneDisplay: "(92) 99319-8359",
-  address: "Av. Djalma Batista, 1234 - Manaus/AM",
   veterinarian: {
     name: "Dr. Igor Araújo",
     specialty: "Médico Veterinário",
@@ -17,22 +16,61 @@ export const siteConfig = {
 
 export const siteAssets = {
   logo: "/images/branding/logo-igor-araujo.webp",
-  logoAlt: `Logo ${clinicInfo.veterinarian.name} Atendimento Veterinário`,
+  logoAlt: `Logo ${clinicInfo.veterinarian.name} Atendimento Veterinário Domiciliar`,
   veterinarianPhoto: "/images/team/dr-igor-real.webp",
 } as const;
 
 export const siteMetadata = {
-  title: `${clinicInfo.name} em ${clinicInfo.city} | Atendimento para pets`,
+  siteName: `${clinicInfo.veterinarian.name} Atendimento Veterinário Domiciliar`,
+  title: `${clinicInfo.veterinarian.name} | Atendimento veterinário domiciliar em ${clinicInfo.city}`,
   description:
-    `Clínica veterinária em ${clinicInfo.city} com consulta pet, vacinas, exames, check-up e atendimento humanizado. Agendamento rápido pelo WhatsApp.`,
+    `Atendimento veterinário domiciliar em ${clinicInfo.city} com consulta pet, vacinas, check-up e acompanhamento no conforto da sua casa. Agendamento rápido pelo WhatsApp.`,
   openGraphDescription:
-    `Cuidado completo para seu pet com consultas, vacinas, exames e agendamento fácil pelo WhatsApp em ${clinicInfo.city}.`,
-  twitterDescription: `Veterinário em ${clinicInfo.city} com consulta pet, vacinação, exames e atendimento humanizado.`,
-  keywords: ["veterinário", "clínica veterinária", "consulta pet", clinicInfo.city, "vacina pet"],
+    `Leve o cuidado veterinário até seu pet com consultas domiciliares, vacinação e acompanhamento em ${clinicInfo.city}.`,
+  twitterDescription: `Veterinário domiciliar em ${clinicInfo.city} para consultas, vacinação e check-up na sua casa.`,
+  openGraphImage: "/images/branding/logo-igor-araujo.webp",
+  keywords: [
+    "veterinário domiciliar em Manaus",
+    "consulta veterinária em casa",
+    "vacina pet em casa",
+    "check-up pet domiciliar",
+    "atendimento veterinário domiciliar",
+    clinicInfo.city,
+  ],
 } as const;
 
-export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(clinicInfo.city)}&output=embed`;
+export const seoServiceNames = [
+  "Consulta veterinária domiciliar",
+  "Vacinação em domicílio para pets",
+  "Check-up preventivo para cães e gatos",
+  "Coleta e orientação de exames",
+  "Atestado veterinário para viagens",
+  "Curativos e acompanhamento domiciliar",
+] as const;
 
-const defaultMessage = "Olá! Quero agendar uma consulta para meu pet.";
+export const seoFaqs = [
+  {
+    question: "Como funciona o atendimento veterinário domiciliar em Manaus?",
+    answer:
+      "O atendimento é agendado pelo WhatsApp. O veterinário vai até sua casa em Manaus para consulta, avaliação clínica e orientações de tratamento para seu pet.",
+  },
+  {
+    question: "Vocês atendem cães e gatos em domicílio?",
+    answer:
+      "Sim. O atendimento domiciliar é realizado para cães e gatos, com foco em conforto, menor estresse do animal e cuidado individualizado.",
+  },
+  {
+    question: "É possível fazer vacinação de pet em casa?",
+    answer:
+      "Sim. A vacinação domiciliar segue orientação veterinária e protocolo atualizado, garantindo segurança no conforto da sua casa.",
+  },
+  {
+    question: "Qual região vocês atendem?",
+    answer:
+      "O atendimento é realizado em Manaus, com agendamento prévio e confirmação de disponibilidade pelo WhatsApp.",
+  },
+] as const;
+
+const defaultMessage = "Olá! Quero agendar um atendimento veterinário domiciliar para meu pet.";
 
 export const whatsappUrl = `https://wa.me/${clinicInfo.phoneRaw}?text=${encodeURIComponent(defaultMessage)}`;

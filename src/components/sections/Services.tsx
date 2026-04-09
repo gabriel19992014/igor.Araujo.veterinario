@@ -9,23 +9,23 @@ import {
 
 const services = [
   {
-    title: "Consultas",
-    description: "Avaliação clínica completa para orientar o melhor cuidado do pet.",
+    title: "Consulta domiciliar",
+    description: "Avaliação clínica completa na sua casa para reduzir estresse do pet.",
     icon: Stethoscope,
   },
   {
-    title: "Vacinas",
-    description: "Protocolos atualizados para prevenção e proteção em todas as fases.",
+    title: "Vacinação em casa",
+    description: "Protocolos atualizados aplicados com conforto e segurança no domicílio.",
     icon: ShieldPlus,
   },
   {
-    title: "Check-up",
+    title: "Check-up domiciliar",
     description: "Acompanhamento preventivo para detectar alterações com antecedência.",
     icon: HeartPulse,
   },
   {
-    title: "Exames",
-    description: "Diagnóstico com suporte laboratorial e orientação precisa.",
+    title: "Coleta e exames",
+    description: "Encaminhamento e orientação de exames com suporte clínico cuidadoso.",
     icon: Microscope,
   },
   {
@@ -34,8 +34,8 @@ const services = [
     icon: Plane,
   },
   {
-    title: "Curativos",
-    description: "Cuidados pós-procedimento e tratamento de feridas com segurança.",
+    title: "Curativos e acompanhamento",
+    description: "Cuidados pós-procedimento e retornos agendados no atendimento domiciliar.",
     icon: FileText,
   },
 ];
@@ -47,7 +47,7 @@ export function Services() {
         <div className="mb-10 max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-blue)]">Serviços</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--ink-900)] sm:text-4xl">
-            Tudo o que seu pet precisa em um atendimento rápido e completo
+            Serviços veterinários no conforto do seu lar
           </h2>
         </div>
 

@@ -3,15 +3,15 @@ import { Quote, Star } from "lucide-react";
 const testimonials = [
   {
     name: "Mariana A.",
-    text: "Salvaram meu cachorro em uma madrugada. Equipe incrível e muito atenciosa.",
+    text: "O atendimento em casa foi impecável. Meu cachorro ficou calmo e foi muito bem cuidado.",
   },
   {
     name: "Carlos e Nina",
-    text: "Atendimento rápido, diagnóstico preciso e acompanhamento depois da consulta.",
+    text: "Praticidade total: o veterinário veio até nossa casa e explicou tudo com muita clareza.",
   },
   {
     name: "Josi R.",
-    text: "A clínica passa muita confiança. Minha gata foi super bem tratada na cirurgia.",
+    text: "Ter consulta domiciliar fez toda diferença para minha gata, que se estressa em deslocamentos.",
   },
 ];
 
@@ -21,7 +21,7 @@ export function Testimonials() {
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-blue)]">Depoimentos</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--ink-900)] sm:text-4xl">
-          Prova social que gera confiança
+          Quem escolheu atendimento domiciliar recomenda
         </h2>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
