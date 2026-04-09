@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { PhoneCall } from "lucide-react";
 
+import { TrackedExternalLink } from "@/components/ui/TrackedExternalLink";
 import { siteAssets, whatsappUrl } from "@/lib/site";
 
 const navItems = [
-  { label: "Servicos", href: "#servicos" },
+  { label: "Serviços", href: "#servicos" },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
 ];
@@ -24,7 +25,7 @@ export function Header() {
           />
         </a>
 
-        <nav className="hidden items-center gap-5 md:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-5 md:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -36,15 +37,19 @@ export function Header() {
           ))}
         </nav>
 
-        <a
+        <TrackedExternalLink
           href={whatsappUrl}
           target="_blank"
           rel="noreferrer"
+          aria-label="Abrir conversa no WhatsApp"
+          title="Abrir conversa no WhatsApp"
+          eventName="whatsapp_click"
+          eventParams={{ placement: "header" }}
           className="inline-flex h-9 items-center justify-center gap-2 rounded-full bg-[var(--brand-green)] px-3 text-xs font-semibold text-white shadow-[0_8px_30px_rgba(22,163,74,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[color-mix(in_oklab,var(--brand-green),black_8%)] sm:h-10 sm:px-5 sm:text-sm"
         >
           <PhoneCall className="h-4 w-4" />
           WhatsApp
-        </a>
+        </TrackedExternalLink>
       </div>
     </header>
   );

@@ -32,3 +32,28 @@ h4 {
 section {
   animation: section-enter 0.65s ease both;
 }
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 100;
+  border-radius: 9999px;
+  background-color: var(--brand-blue);
+  color: #fff;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--brand-blue) 70%, white 30%);
+  outline-offset: 3px;
+}

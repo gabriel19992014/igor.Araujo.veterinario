@@ -8,8 +8,8 @@ const galleryItems = [
   },
   {
     src: "/images/gallery/Avaliacao_felina.webp",
-    alt: "Gato em avaliacao veterinaria",
-    label: "Avaliacao felina",
+    alt: "Gato em avaliação veterinária",
+    label: "Avaliação felina",
   },
   {
     src: "/images/gallery/Retorno_acompanhado.webp",
@@ -18,8 +18,8 @@ const galleryItems = [
   },
   {
     src: "/images/gallery/Recuperacao_com_cuidado.webp",
-    alt: "Pet recuperado apos atendimento",
-    label: "Recuperacao com cuidado",
+    alt: "Pet recuperado após atendimento",
+    label: "Recuperação com cuidado",
   },
 ];
 
@@ -30,10 +30,10 @@ export function Gallery() {
         <div className="mb-10 max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-blue)]">Galeria</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--ink-900)] sm:text-4xl">
-            Pets atendidos com carinho e atencao
+            Pets atendidos com carinho e atenção
           </h2>
           <p className="mt-3 text-[var(--ink-600)]">
-            Prova visual de um atendimento humanizado para quem busca uma clinica veterinaria de confianca em Manaus.
+            Prova visual de um atendimento humanizado para quem busca uma clínica veterinária de confiança em Manaus.
           </p>
         </div>
 

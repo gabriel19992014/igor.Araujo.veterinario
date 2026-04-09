@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-black/5 bg-[var(--ink-900)] text-white">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-12 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:px-8">
         <div className="space-y-3">
-          <p className="text-xs uppercase tracking-[0.2em] text-white/65">Atendimento Veterinario</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-white/65">Atendimento Veterinário</p>
           <h2 className="text-2xl font-bold tracking-tight">{clinicInfo.veterinarian.name}</h2>
           <p className="max-w-sm text-sm text-white/75">
             Seu pet merece o melhor cuidado com atendimento humanizado e equipe dedicada.

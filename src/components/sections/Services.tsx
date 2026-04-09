@@ -10,32 +10,32 @@ import {
 const services = [
   {
     title: "Consultas",
-    description: "Avaliacao clinica completa para orientar o melhor cuidado do pet.",
+    description: "Avaliação clínica completa para orientar o melhor cuidado do pet.",
     icon: Stethoscope,
   },
   {
     title: "Vacinas",
-    description: "Protocolos atualizados para prevencao e protecao em todas as fases.",
+    description: "Protocolos atualizados para prevenção e proteção em todas as fases.",
     icon: ShieldPlus,
   },
   {
     title: "Check-up",
-    description: "Acompanhamento preventivo para detectar alteracoes com antecedencia.",
+    description: "Acompanhamento preventivo para detectar alterações com antecedência.",
     icon: HeartPulse,
   },
   {
     title: "Exames",
-    description: "Diagnostico com suporte laboratorial e orientacao precisa.",
+    description: "Diagnóstico com suporte laboratorial e orientação precisa.",
     icon: Microscope,
   },
   {
     title: "Atestado de viagem",
-    description: "Documentacao veterinaria para viagens nacionais e internacionais.",
+    description: "Documentação veterinária para viagens nacionais e internacionais.",
     icon: Plane,
   },
   {
     title: "Curativos",
-    description: "Cuidados pos-procedimento e tratamento de feridas com seguranca.",
+    description: "Cuidados pós-procedimento e tratamento de feridas com segurança.",
     icon: FileText,
   },
 ];
@@ -45,9 +45,9 @@ export function Services() {
     <section id="servicos" className="bg-white py-20 sm:py-24">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
         <div className="mb-10 max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-blue)]">Servicos</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-blue)]">Serviços</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--ink-900)] sm:text-4xl">
-            Tudo que seu pet precisa em um atendimento rapido e completo
+            Tudo o que seu pet precisa em um atendimento rápido e completo
           </h2>
         </div>
 

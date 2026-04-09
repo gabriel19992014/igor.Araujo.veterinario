@@ -4,9 +4,9 @@ import { CheckCircle2 } from "lucide-react";
 import { clinicInfo, siteAssets } from "@/lib/site";
 
 const differentials = [
-  "Atendimento humanizado para caes e gatos",
-  "Consulta com orientacao clara para o tutor",
-  "Acompanhamento dedicado no pos-consulta",
+  "Atendimento humanizado para cães e gatos",
+  "Consulta com orientação clara para o tutor",
+  "Acompanhamento dedicado no pós-consulta",
 ];
 
 export function About() {
@@ -16,11 +16,11 @@ export function About() {
         <div className="space-y-5">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-blue)]">Sobre o profissional</p>
           <h2 className="text-3xl font-bold tracking-tight text-[var(--ink-900)] sm:text-4xl">
-            Confiança para cuidar de quem faz parte da sua familia
+            Confiança para cuidar de quem faz parte da sua família
           </h2>
           <p className="leading-8 text-[var(--ink-600)]">
             {clinicInfo.veterinarian.name}, {clinicInfo.veterinarian.specialty}, atua com foco em medicina preventiva,
-            atendimento clinico e acolhimento de tutores. Cada consulta e pensada para ser clara, cuidadosa e eficiente.
+            atendimento clínico e acolhimento de tutores. Cada consulta é pensada para ser clara, cuidadosa e eficiente.
           </p>
 
           <div className="grid gap-3 text-sm">
@@ -47,7 +47,7 @@ export function About() {
             />
           </div>
 
-          <p className="text-center text-sm font-semibold uppercase tracking-[0.16em] text-[var(--ink-500)]">Atendimento com excelencia</p>
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.16em] text-[var(--ink-500)]">Atendimento com excelência</p>
           <div className="mt-6 space-y-4">
             {differentials.map((item) => (
               <div key={item} className="flex items-start gap-3">

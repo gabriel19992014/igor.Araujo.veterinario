@@ -3,15 +3,15 @@ import { Quote, Star } from "lucide-react";
 const testimonials = [
   {
     name: "Mariana A.",
-    text: "Salvaram meu cachorro em uma madrugada. Equipe incrivel e muito atenciosa.",
+    text: "Salvaram meu cachorro em uma madrugada. Equipe incrível e muito atenciosa.",
   },
   {
     name: "Carlos e Nina",
-    text: "Atendimento rapido, diagnostico preciso e acompanhamento depois da consulta.",
+    text: "Atendimento rápido, diagnóstico preciso e acompanhamento depois da consulta.",
   },
   {
     name: "Josi R.",
-    text: "A clinica passa muita confianca. Minha gata foi super bem tratada na cirurgia.",
+    text: "A clínica passa muita confiança. Minha gata foi super bem tratada na cirurgia.",
   },
 ];
 
@@ -21,7 +21,7 @@ export function Testimonials() {
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-blue)]">Depoimentos</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--ink-900)] sm:text-4xl">
-          Prova social que gera confianca
+          Prova social que gera confiança
         </h2>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">

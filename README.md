@@ -1,22 +1,22 @@
-# Landing Page Veterinaria
+# Landing Page Veterinária
 
-Landing page institucional focada em conversao via WhatsApp, pronta para apresentacao ao cliente e organizada para facilitar uma futura migracao para Vue.
+Landing page institucional focada em conversão via WhatsApp, pronta para apresentação ao cliente e organizada para facilitar uma futura migração para Vue.
 
 ## Estrutura atual
 
-- Hero com CTA principal e apresentacao do profissional
-- Servicos principais em cards simples
+- Hero com CTA principal e apresentação do profissional
+- Serviços principais em cards simples
 - Bloco Sobre com credenciais e diferenciais
-- Depoimentos estaticos para prova social
+- Depoimentos estáticos para prova social
 - Galeria de imagens em webp
-- CTA intermediaria
+- CTA intermediária
 - Contato com mapa, telefone e WhatsApp
 
 ## O que foi simplificado
 
-- Removidas animacoes e estados que nao eram essenciais para demonstracao
-- Removidos wrappers genericos de UI para deixar os componentes mais diretos
-- Removidas dependencias sem uso real apos a simplificacao
+- Removidas animações e estados que não eram essenciais para demonstração
+- Removidos wrappers genéricos de UI para deixar os componentes mais diretos
+- Removidas dependências sem uso real após a simplificação
 - Removidos placeholders de redes sociais no rodape
 
 ## Como executar
@@ -28,20 +28,36 @@ npm run dev
 
 Abra http://localhost:3000.
 
+## Google Analytics (GA4)
+
+Para ativar o GA4, configure a variável de ambiente abaixo:
+
+```bash
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
+
+Opcionalmente, defina também a URL pública do site:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://seu-dominio.com.br
+```
+
+Há um exemplo em `.env.example`.
+
 ## Portar para Vue
 
-Os componentes estao organizados por secao em `src/components/sections`, o que facilita replicar cada bloco em componentes Vue.
+Os componentes estão organizados por seção em `src/components/sections`, o que facilita replicar cada bloco em componentes Vue.
 
-Sugestao de migracao:
+Sugestão de migração:
 
-1. Criar uma pagina unica no Vue com a mesma ordem de secoes.
+1. Criar uma página única no Vue com a mesma ordem de seções.
 2. Reaproveitar os dados centralizados de `src/lib/site.ts` em um arquivo `site.ts` ou `site.js` no Vue.
-3. Copiar as classes Tailwind diretamente, pois os componentes agora dependem menos de abstracoes internas.
-4. Manter as imagens de `public/images` como estao, pois ja estao padronizadas em webp.
+3. Copiar as classes Tailwind diretamente, pois os componentes agora dependem menos de abstrações internas.
+4. Manter as imagens de `public/images` como estão, pois já estão padronizadas em webp.
 
 ## Arquivos principais
 
-- `src/app/page.tsx`: composicao da landing
+- `src/app/page.tsx`: composição da landing
 - `src/components/layout`: header e footer
-- `src/components/sections`: secoes visuais da pagina
-- `src/lib/site.ts`: dados da clinica e link do WhatsApp
+- `src/components/sections`: seções visuais da página
+- `src/lib/site.ts`: dados da clínica e link do WhatsApp

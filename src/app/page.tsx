@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="bg-[var(--background)]">
       <Header />
-      <main>
+      <main id="conteudo-principal">
         <Hero />
         <Services />
         <About />

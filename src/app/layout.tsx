@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Sora } from "next/font/google";
+import Script from "next/script";
 
-import { siteMetadata } from "@/lib/site";
+import { clinicInfo, siteConfig, siteMetadata, whatsappUrl } from "@/lib/site";
 
 import "./globals.css";
 
@@ -15,9 +16,15 @@ const nunito = Nunito_Sans({
   subsets: ["latin"],
 });
 
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: siteMetadata.title,
   description: siteMetadata.description,
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -29,6 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.openGraphDescription,
+    url: siteConfig.url,
     type: "website",
     locale: "pt_BR",
   },
@@ -39,6 +47,24 @@ export const metadata: Metadata = {
   },
 };
 
+const veterinarySchema = {
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  name: clinicInfo.name,
+  image: `${siteConfig.url}${"/images/branding/logo-igor-araujo.webp"}`,
+  telephone: clinicInfo.phoneDisplay,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: clinicInfo.address,
+    addressLocality: clinicInfo.city,
+    addressCountry: "BR",
+  },
+  areaServed: clinicInfo.city,
+  url: siteConfig.url,
+  sameAs: [whatsappUrl],
+  medicalSpecialty: "VeterinaryMedicine",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +72,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${sora.variable} ${nunito.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <a href="#conteudo-principal" className="skip-link">
+          Pular para o conteúdo principal
+        </a>
+        {gaId ? (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  anonymize_ip: true,
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        ) : null}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(veterinarySchema).replace(/</g, "\\u003c"),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
