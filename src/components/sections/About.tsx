@@ -5,7 +5,7 @@ import { clinicInfo, siteAssets } from "@/lib/site";
 
 const differentials = [
   "Atendimento veterinário domiciliar com foco no bem-estar do pet",
-  "Consulta com orientação clara para o tutor dentro de casa",
+  "Consulta com orientação clara para o responsável pelo animal dentro de casa",
   "Acompanhamento dedicado no pós-consulta e retornos programados",
 ];
 
@@ -20,7 +20,7 @@ export function About() {
           </h2>
           <p className="leading-8 text-[var(--ink-600)]">
             {clinicInfo.veterinarian.name}, {clinicInfo.veterinarian.specialty}, realiza atendimento domiciliar com foco em medicina preventiva,
-            diagnóstico clínico e acolhimento dos tutores. Cada visita é pensada para ser clara, cuidadosa e eficiente.
+            diagnóstico clínico e acolhimento dos responsáveis pelo animal. Cada visita é pensada para ser clara, cuidadosa e eficiente.
           </p>
 
           <div className="grid gap-3 text-sm">
