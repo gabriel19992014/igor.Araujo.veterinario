@@ -6,7 +6,7 @@ export const clinicInfo = {
   veterinarian: {
     name: "Dr. Igor Araújo",
     specialty: "Médico Veterinário",
-    crmv: "CRMV-AM 1234",
+    crmv: "CRMV-AM 02771",
   },
 } as const;
 
