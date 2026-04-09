@@ -40,7 +40,7 @@ export function Contact() {
               Falar no WhatsApp
             </TrackedExternalLink>
             <TrackedExternalLink
-              href={`tel:${clinicInfo.phoneRaw}`}
+              href={`tel:+${clinicInfo.phoneRaw}`}
               aria-label="Ligar agora para a clínica"
               title="Ligar agora para a clínica"
               eventName="phone_click"
@@ -60,6 +60,7 @@ export function Contact() {
             loading="lazy"
             className="h-[480px] w-full rounded-[1.6rem]"
             referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
           />
         </div>
       </div>
