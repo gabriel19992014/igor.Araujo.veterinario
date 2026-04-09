@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const galleryItems = [
   {
-    src: "/images/gallery/pet-01.webp",
+    src: "/images/gallery/Consulta_de_rotina.webp",
     alt: "Cachorro em consulta de rotina",
     label: "Consulta de rotina",
   },
   {
-    src: "/images/gallery/pet-02.webp",
+    src: "/images/gallery/Avaliacao_felina.webp",
     alt: "Gato em avaliacao veterinaria",
     label: "Avaliacao felina",
   },
   {
-    src: "/images/gallery/pet-03.webp",
+    src: "/images/gallery/Retorno_acompanhado.webp",
     alt: "Tutor acompanhando retorno do pet",
     label: "Retorno acompanhado",
   },
   {
-    src: "/images/gallery/pet-04.webp",
+    src: "/images/gallery/Recuperacao_com_cuidado.webp",
     alt: "Pet recuperado apos atendimento",
     label: "Recuperacao com cuidado",
   },
@@ -41,19 +41,21 @@ export function Gallery() {
           {galleryItems.map((item) => (
             <figure
               key={item.src}
-              className="group overflow-hidden rounded-3xl border border-black/5 bg-white p-2 shadow-[0_14px_48px_rgba(17,24,39,0.08)]"
+              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-white p-2 shadow-[0_14px_48px_rgba(17,24,39,0.08)]"
             >
-              <div className="overflow-hidden rounded-2xl">
+              <div className="relative aspect-[16/11] w-full overflow-hidden rounded-2xl">
                 <Image
                   src={item.src}
                   alt={item.alt}
-                  width={640}
-                  height={440}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   loading="lazy"
-                  className="h-auto w-full transition duration-500 group-hover:scale-[1.03]"
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
                 />
               </div>
-              <figcaption className="px-3 pb-2 pt-3 text-sm font-semibold text-[var(--ink-700)]">{item.label}</figcaption>
+              <figcaption className="flex h-10 items-center px-3 text-sm font-semibold leading-tight text-[var(--ink-700)]">
+                {item.label}
+              </figcaption>
             </figure>
           ))}
         </div>
