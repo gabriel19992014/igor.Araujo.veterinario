@@ -16,7 +16,7 @@ const nunito = Nunito_Sans({
   subsets: ["latin"],
 });
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "G-95199S2D4Z";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
