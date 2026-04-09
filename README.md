@@ -2,6 +2,8 @@
 
 Landing page institucional focada em conversão via WhatsApp para atendimento domiciliar de pets. Construída com **Next.js 16**, **Tailwind CSS v4**, **TypeScript** e otimizada para performance com imagens em WebP.
 
+link do projeto: https://vetdomiciliarmanaus.vercel.app/
+
 ## 📊 Melhorias Recentes
 
 - ✅ Correções ortográficas completas (português)
