@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page Veterinaria
 
-## Getting Started
+Landing page institucional focada em conversao via WhatsApp, pronta para apresentacao ao cliente e organizada para facilitar uma futura migracao para Vue.
 
-First, run the development server:
+## Estrutura atual
+
+- Hero com CTA principal e apresentacao do profissional
+- Servicos principais em cards simples
+- Bloco Sobre com credenciais e diferenciais
+- Depoimentos estaticos para prova social
+- Galeria de imagens em webp
+- CTA intermediaria
+- Contato com mapa, telefone e WhatsApp
+
+## O que foi simplificado
+
+- Removidas animacoes e estados que nao eram essenciais para demonstracao
+- Removidos wrappers genericos de UI para deixar os componentes mais diretos
+- Removidas dependencias sem uso real apos a simplificacao
+- Removidos placeholders de redes sociais no rodape
+
+## Como executar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Portar para Vue
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Os componentes estao organizados por secao em `src/components/sections`, o que facilita replicar cada bloco em componentes Vue.
 
-## Learn More
+Sugestao de migracao:
 
-To learn more about Next.js, take a look at the following resources:
+1. Criar uma pagina unica no Vue com a mesma ordem de secoes.
+2. Reaproveitar os dados centralizados de `src/lib/site.ts` em um arquivo `site.ts` ou `site.js` no Vue.
+3. Copiar as classes Tailwind diretamente, pois os componentes agora dependem menos de abstracoes internas.
+4. Manter as imagens de `public/images` como estao, pois ja estao padronizadas em webp.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Arquivos principais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx`: composicao da landing
+- `src/components/layout`: header e footer
+- `src/components/sections`: secoes visuais da pagina
+- `src/lib/site.ts`: dados da clinica e link do WhatsApp

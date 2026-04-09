@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f2f8ff;
+  --foreground: #071734;
+  --surface-1: #e8f2ff;
+  --surface-2: #f7fbff;
+  --brand-green: #16a34a;
+  --brand-blue: #0d4aa5;
+  --brand-blue-soft: #cfe3ff;
+  --ink-900: #071734;
+  --ink-700: #334155;
+  --ink-600: #475569;
+  --ink-500: #64748b;
+}
+
+@keyframes section-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
