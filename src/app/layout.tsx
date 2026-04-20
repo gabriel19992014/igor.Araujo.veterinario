@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Sora } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 import { clinicInfo, seoFaqs, seoServiceNames, siteConfig, siteMetadata } from "@/lib/site";
 
@@ -142,6 +143,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
